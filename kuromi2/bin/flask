@@ -1,0 +1,10 @@
+#!/Users/kimuramiyuki/aoyama/情報科学総合演習/kuromi_python2/kuromi2/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from flask.cli import main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
