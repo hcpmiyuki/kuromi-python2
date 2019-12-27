@@ -1,10 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import flask
 from flask import Flask, Response, request, jsonify
 from main import app
 from main.tools import *
 
-
-@app.route('/')
+@app.route('/hello')
 def show_entries():
     return 'Hello, World!'
 

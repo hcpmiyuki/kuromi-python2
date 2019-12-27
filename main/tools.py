@@ -11,10 +11,15 @@ def talk(msg):
     kuromi_status = "smile"
     print(base_list)
     if ("マイメロ" in base_list) or ("お願い" in base_list) or ("おねがい" in base_list):
-        kuromi_status = "angry"
-        sound("アタイが一番嫌いな言葉を使いやがって.mp3", 4)
-        print("アタイが一番嫌いな言葉を使いやがって")
-    elif ("バカ" in base_list) or ("ばか" in base_list) or ("馬鹿" in base_list) or ("アホ" in base_list) or ("あほ" in base_list) or ("嫌い" in base_list) or ("きらい" in base_list) or ("キライ" in base_list) or ("キモイ" in base_list) or ("きもい" in base_list) or ("キモい" in base_list):
+        if ("バカ" in base_list) or ("ばか" in base_list) or ("馬鹿" in base_list) or ("アホ" in base_list) or ("あほ" in base_list) or ("嫌い" in base_list) or ("嫌う" in base_list) or ("きらい" in base_list) or ("キライ" in base_list) or ("キモイ" in base_list) or ("きもい" in base_list) or ("キモい" in base_list):
+            sound("そんな、嬉しいー.mp3", 3)
+            kuromi_status = "heart"
+            print("そんな、嬉しいー")
+        else:
+            kuromi_status = "angry"
+            sound("アタイが一番嫌いな言葉を使いやがって.mp3", 4)
+            print("アタイが一番嫌いな言葉を使いやがって")
+    elif ("バカ" in base_list) or ("ばか" in base_list) or ("馬鹿" in base_list) or ("アホ" in base_list) or ("あほ" in base_list) or ("嫌い" in base_list) or ("嫌う" in base_list) or ("きらい" in base_list) or ("キライ" in base_list) or ("キモイ" in base_list) or ("きもい" in base_list) or ("キモい" in base_list):
         num = random.randint(0, 1)
         kuromi_status = "angry"
         if num == 0:
