@@ -61,15 +61,14 @@ def talk(msg):
         print("うん")
         kuromi_status = "goodnight"
     elif ("会う" in base_list) or ("会える" in base_list):
-        # 会いにきてない
         sound("遊びに来てくれたな、嬉しいな、今紅茶を入れるね.mp3", 4)
-        print("会いたくない")
+        print("嬉しいな")
     elif ("頑張る" in base_list) or ("がんばる" in base_list) or ("できる" in base_list):
         sound("わー！かっこいい！.mp3", 3)
         kuromi_status = "heart"
     elif ("歌" in base_list) or ("うた" in base_list) or ("歌う" in base_list):
         num = random.randint(1, 3)
-        sound("歌" + str(num) + ".mp3", 10)
+        sound("歌" + str(num) + ".mp3", 20)
         # ランダムで歌わせる
         print("歌ってあげる")
     else:
